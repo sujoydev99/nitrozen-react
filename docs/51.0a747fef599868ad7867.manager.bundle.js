@@ -1,4 +1,4 @@
-/*! For license information please see 51.96735dad2f18ebcd5fd3.manager.bundle.js.LICENSE.txt */
+/*! For license information please see 51.0a747fef599868ad7867.manager.bundle.js.LICENSE.txt */
 (self.webpackChunk_gofynd_nitrozen_react =
   self.webpackChunk_gofynd_nitrozen_react || []).push([
   [51],
@@ -2066,12 +2066,14 @@
                   newChild = { type: "text", value: "".concat(text, "\n") };
                 if (0 === i) {
                   var _line = createLine(
-                    tree.slice(lastLineBreakIndex + 1, index).concat(
-                      createLineElement({
-                        children: [newChild],
-                        className: node.properties.className,
-                      })
-                    ),
+                    tree
+                      .slice(lastLineBreakIndex + 1, index)
+                      .concat(
+                        createLineElement({
+                          children: [newChild],
+                          className: node.properties.className,
+                        })
+                      ),
                     lineNumber
                   );
                   newTree.push(_line);
@@ -2698,8 +2700,8 @@
               : (value = (function datasetToAttribute(property) {
                   var value = property.slice(4);
                   if (dash$1.test(value)) return property;
-                  "-" !== (value = value.replace(cap$1, kebab)).charAt(0) &&
-                    (value = "-" + value);
+                  (value = value.replace(cap$1, kebab)),
+                    "-" !== value.charAt(0) && (value = "-" + value);
                   return "data" + value;
                 })(value)),
             (Type = DefinedInfo));
@@ -5511,9 +5513,10 @@
         name = "named",
         hexa = "hexadecimal",
         deci = "decimal",
-        bases = { hexadecimal: 16, decimal: 10 },
-        tests = {};
-      (tests.named = alphanumerical),
+        bases = {};
+      (bases[hexa] = 16), (bases[deci] = 10);
+      var tests = {};
+      (tests[name] = alphanumerical),
         (tests[deci] = decimal),
         (tests[hexa] = hexadecimal);
       var messages = {};
@@ -6350,9 +6353,8 @@
           alias && ((map = {})[name] = alias);
           for (key in map)
             for (
-              list = map[key],
-                length = (list = "string" == typeof list ? [list] : list)
-                  .length,
+              length = (list =
+                "string" == typeof (list = map[key]) ? [list] : list).length,
                 index = -1;
               ++index < length;
 

@@ -112,16 +112,15 @@
       chunkId +
       "." +
       {
-        51: "8d9ea254",
-        229: "3c1fa35f",
-        551: "047b9ca3",
-        701: "15be7ef6",
-        807: "4a4ffca9",
-        863: "f537e6c9",
-        897: "446ae7c1",
-        935: "66fa7e30",
+        51: "0a747fef599868ad7867",
+        229: "4b0b7e447161821581c5",
+        295: "e557b76ac33393f75c55",
+        551: "b45ca63460275a5ad368",
+        807: "fc44ecbc36c6240cccaf",
+        897: "5aa5347650faa5aff83b",
+        935: "0cd62d27fb1ca11197f2",
       }[chunkId] +
-      ".iframe.bundle.js"),
+      ".manager.bundle.js"),
     (__webpack_require__.g = (function () {
       if ("object" == typeof globalThis) return globalThis;
       try {
@@ -208,7 +207,6 @@
     )),
     (__webpack_require__.p = ""),
     (() => {
-      __webpack_require__.b = document.baseURI || self.location.href;
       var installedChunks = { 303: 0 };
       (__webpack_require__.f.j = (chunkId, promises) => {
         var installedChunkData = __webpack_require__.o(installedChunks, chunkId)
